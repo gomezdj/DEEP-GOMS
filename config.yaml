@@ -1,0 +1,7 @@
+samples:
+  - sample1
+  - sample2
+  - sample3
+kraken_db: "/path/to/kraken_db"
+humann_db: "/path/to/humann_db"
+output_dir: "results/"
