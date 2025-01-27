@@ -25,6 +25,20 @@ The DEEP-GOMS project aims to develop a reproducible and predictive model for gu
 - **Biomarker Discovery**: Uncover key taxa or pathways associated with conditions.
 - **Predictive Modeling**: Train machine learning models using microbiome datasets.
 
+## Quick Start
+
+1. Clone the repository:
+```
+   bash
+   git clone https://github.com/gomez-dan/DEEP-GOMS.git
+   cd DEEP-GOMS
+```
+
+2.	Install required dependencies:
+```
+  Rscript install_dependencies.R
+```
+
 ## Setup and Installation
 
 1. **Install Dependencies**:
