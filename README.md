@@ -4,8 +4,26 @@
 
 The DEEP-GOMS project aims to develop a reproducible and predictive model for gut oncomicrobiome signatures using machine learning algorithms. The pipeline integrates multi-omics data to predict responses to immunotherapy.
 
-## Directory Structure
-DEEP-GOMS/ ├── data/ │ ├── raw/ │ ├── processed/ │ └── ... ├── results/ │ ├── fastqc/ │ ├── trimmed/ │ ├── kraken2/ │ ├── bracken/ │ ├── humann3/ │ └── ... ├── scripts/ │ ├── data_preprocessing.R │ ├── integrate_results.R │ ├── train_model.R │ └── ... ├── R/ │ ├── functions.R │ └── ... ├── _targets.R ├── config.yaml ├── README.md └── .gitignore
+## Features
+
+- **Data Preprocessing**: Automated pipelines for raw data cleaning and transformation.
+- **Taxonomic Profiling**: Tools like Kraken2 and Bracken for microbial classification.
+- **Statistical Analysis**: Integration of results with HUMAnN3 for pathway analysis.
+- **Machine Learning**: Scripts to train and validate predictive models.
+
+## Requirements
+
+- **R (≥ 4.0)**: For data preprocessing and analysis.
+- **FASTQC (≥ 0.11.9)**: For quality control of sequencing reads.
+- **Kraken2 (≥ 2.1.2)**: For taxonomic classification.
+- **HUMAnN3 (≥ 3.6)**: For functional profiling.
+- **Python (≥ 3.8)**: For auxiliary scripts.
+
+## Use Cases
+
+- **Microbiome Research**: Analyze metagenomic data to identify microbial communities.
+- **Biomarker Discovery**: Uncover key taxa or pathways associated with conditions.
+- **Predictive Modeling**: Train machine learning models using microbiome datasets.
 
 ## Setup and Installation
 
