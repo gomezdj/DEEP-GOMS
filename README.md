@@ -57,7 +57,7 @@ git clone https://github.com/gomezdj/DEEP-GOMS.git
 cd DEEP-GOMS
 ```
 
-Running the Workflow
+3. Running the Workflow
 Activate Environment: Ensure you have the necessary environment set up with required dependencies.
 Run the Pipeline:
 ```
@@ -65,24 +65,8 @@ library(targets)
 tar_make()
 ```
 
-Customization
+4. Customization for Personalization
 Modify the _targets.R and config.yaml files according to your specific needs.
-Contact
-For any questions or issues, please contact Daniel Gomez.
 
-#### 8. .gitignore
-
-Include a `.gitignore` file to avoid committing unnecessary files.
-
-```gitignore
-# R related exclusions
-.Rhistory
-.RData
-.Rproj.user/
-
-# Results and data
-results/
-data/processed/
-data/trimmed/
-```
-
+## Contact
+For any questions or issues, please contact Daniel Gomez (gomezscientist0@gmail.com).
