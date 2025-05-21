@@ -1,1 +1,10 @@
 
+# R related exclusions
+.Rhistory
+.RData
+.Rproj.user/
+
+# Results and data
+results/
+data/processed/
+data/trimmed/
