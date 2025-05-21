@@ -13,11 +13,12 @@ The DEEP-GOMS project aims to develop a reproducible and predictive model for gu
 
 ## Requirements
 
-- **R (≥ 4.0)**: For data preprocessing and analysis.
+- **R (≥ 4.4)**: For data preprocessing and analysis.
 - **FASTQC (≥ 0.11.9)**: For quality control of sequencing reads.
 - **Kraken2 (≥ 2.1.2)**: For taxonomic classification.
 - **HUMAnN3 (≥ 3.6)**: For functional profiling.
-- **Python (≥ 3.8)**: For auxiliary scripts.
+- **MetaPhLAN**: For microbial communities from metagenomic shotgun sequencing.
+- **Python (≥ 3.8)**: For Kraken2, HUMAnN3, and MetaphLAN integration.
 
 ## Use Cases
 
@@ -52,7 +53,7 @@ install.packages("targets")
 ```
 2. **Clone the Repository**:
 ```
-git clone https://github.com/gomez-dan/DEEP-GOMS.git
+git clone https://github.com/gomezdj/DEEP-GOMS.git
 cd DEEP-GOMS
 ```
 
