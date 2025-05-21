@@ -1,8 +1,34 @@
 # DEEP-GOMS Project
+DEEP-GOMS (Deep Evolutionary Exercise Prediction Gut OncoMicrobiome Signatures)
 
 ## Overview
+The DEEP-GOMS project aims to develop a reproducible and predictive model for gut oncomicrobiome signatures using machine learning algorithms. The pipeline integrates multi-omics data to predict responses to immunotherapy. This experimental design details the controls, experiments, variables, techniques, measurements, and data analysis plan to validate the DEEP-GOMS deep learning predictive model for gut oncomicrobiome signatures (GOMS), immune checkpoint inhibitors (ICI) response, CAR-T, CAR-NK, CAR-M immunotherapies, and intratumoral immunotherapy (ITIT) therapeutics.
 
-The DEEP-GOMS project aims to develop a reproducible and predictive model for gut oncomicrobiome signatures using machine learning algorithms. The pipeline integrates multi-omics data to predict responses to immunotherapy.
+### Potential mechanisms that could be employed to improve responses to immunotherapy via exercise.
+
+Immunotherapy: ICI
+Mode of Exercise: Acute/training
+Mechanism: Increase in trafficking and homing of T cells to tumors, Increase in T cell activation and proliferation, Reduce infiltration of immunosuppresive myeloid cells to the TME
+Mode of Exercise: Chronic/long term
+Mechanism: Diminish the presence of senescent T cells, Improve T cell function and metabolism
+
+Immunotherapy: Adoptive, CAR, and gamma-delta T cell therapies
+Mode of Exercise: Acute/training
+Mechanism: Increase in T cell numbers including low frequency viral or antigen specific T cells for ex vivo expansion, increase in trafficking and homing of T cells to tumors, increase in T cell activation, proliferation, and cytotoxicity, enhance persistence of T cells in vivo
+Mode of Exercise: Chronic/training
+Mechanism: Maintain homeostatic mechanisms for naive T cell survival via IL-7, enhance persistence of T cells in vivo, decrease in dysfunctional senescent T cells
+
+Immunotherapy: NK Cell Therapies
+Mode of Exercise: Acute/training
+Mechanism: Increase in cell numbers for ex vivo expansion, incrase in traifficking and homing of NK cells to tumors, incrase in NK cell activation, proliferation, and cytotoxicity, enhance persistence of NK cells in vivo
+Mode of Exercise: Chronic/training
+Mechanism: Prevent obesity-mediated NK cell dysfunction, enhance persistence of NK cells in vivo
+
+Immunotherapy: Cancer vaccines: Dendritic cells and acellular
+Mode of Exercise: Acute/training
+Mechanism: Increase in cell yield from leukapheresis products, improve efficiency of DC maturation in vivo
+Mode of Exercise: Chronic/training 
+Mechanism: Improve maintence of circulating DCs normally lost during aging, decreased age-related decline in phagocytic activity, antigen presentation, migratory capacity of DCS
 
 ## Features
 
