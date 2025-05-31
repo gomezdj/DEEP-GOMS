@@ -7,7 +7,7 @@ The DEEP-GOMS project aims to develop a reproducible and predictive model for gu
 ### Potential mechanisms that may be employed to improve responses to immunotherapy via exercise
 
 Immunotherapy: ICI
-Mode of Exercise: Acute/training /n
+Mode of Exercise: Acute/training
 Mechanism: Increase in trafficking and homing of T cells to tumors, Increase in T cell activation and proliferation, Reduce infiltration of immunosuppresive myeloid cells to the TME
 Mode of Exercise: Chronic/long term
 Mechanism: Diminish the presence of senescent T cells, Improve T cell function and metabolism
