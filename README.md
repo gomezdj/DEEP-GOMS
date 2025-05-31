@@ -40,7 +40,7 @@ Mechanism: Improve maintenance of circulating DCs normally lost during aging, de
 ## Requirements
 
 - **R (≥ 4.4)**: For data preprocessing and analysis.
-- **FASTQC (≥ 0.11.9)**: For quality control of sequencing reads.
+- **FASTQC (≥ 0.12.0)**: For quality control of sequencing reads.
 - **Kraken2 (≥ 2.1.2)**: For taxonomic classification.
 - **HUMAnN3 (≥ 3.6)**: For functional profiling.
 - **MetaPhLAN**: For microbial communities from metagenomic shotgun sequencing.
@@ -57,8 +57,8 @@ Mechanism: Improve maintenance of circulating DCs normally lost during aging, de
 1. Clone the repository:
 ```
    bash
-   git clone https://github.com/gomez-dan/DEEP-GOMS.git
-   cd DEEP-GOMS
+   git clone https://github.com/gomezdj/DEEPGOMS.git
+   cd DEEPGOMS
 ```
 
 2.	Install required dependencies:
@@ -71,7 +71,7 @@ Mechanism: Improve maintenance of circulating DCs normally lost during aging, de
 1. **Install Dependencies**:
 ```R
 install.packages("fastqcr")
-install.packages("dada2")
+install.packages("curatedMetagenomicData")
 install.packages("phyloseq")
 install.packages("caret")
 install.packages("randomForest")
@@ -87,12 +87,11 @@ cd DEEP-GOMS
 Activate Environment: Ensure you have the necessary environment set up with required dependencies.
 Run the Pipeline:
 ```
-library(targets)
-tar_make()
+library()
 ```
 
 4. Customization for Personalization
-Modify the _targets.R and config.yaml files according to your specific needs.
+Modify and config.yaml files according to your specific needs.
 
 ## Contact
 For any questions or issues, please contact Daniel Gomez (gomezscientist0@gmail.com).
