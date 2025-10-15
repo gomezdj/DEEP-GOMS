@@ -43,6 +43,8 @@ The primary machine learning, data handling, and network analysis components are
 | Package | Version | Purpose |
 | :--- | :--- | :--- |
 | **PyTorch** | Latest Stable | Core Deep Learning Model (DEEP-GOMS) training. |
+| **MetaPhlAn** | Latest Stable | **Taxonomic Profiling** of raw WGS/16S data. |
+| **GraPhlAn** | Latest Stable | **Visualization** of taxonomic and phylogenic trees. |
 | **scikit-learn** | Latest Stable | Model evaluation, splitting, and general ML utilities. |
 | **Numpy** | 1.16.6+ | Numerical computing. |
 | **Scipy** | 1.7.1+ | Scientific computing (includes `scipy.optimize` and kernel methods). |
