@@ -1,101 +1,160 @@
-# DEEP-GOMS Project
-DEEP-GOMS (Deep Evolutionary Exercise Prediction Gut OncoMicrobiome Signatures)
+Here is the complete content for the `README.md` file, formatted correctly in Markdown, with the tables and code blocks properly enclosed.
 
-## Overview
-The DEEP-GOMS project aims to develop a reproducible and predictive model for gut oncomicrobiome signatures using machine learning algorithms. The pipeline integrates multi-omics data to predict responses to immunotherapy. This experimental design details the controls, experiments, variables, techniques, measurements, and data analysis plan to validate the DEEP-GOMS deep learning predictive model for gut oncomicrobiome signatures (GOMS), immune checkpoint inhibitors (ICI) response, CAR-T, CAR-NK, CAR-M immunotherapies, and intratumoral immunotherapy (ITIT) therapeutics.
+````markdown
+# 🧬 DEEP-GOMS: Cohort-Driven Predictive Modeling of Immunotherapy Response
 
-### Potential mechanisms that may be employed to improve responses to immunotherapy via exercise
+DEEP-GOMS (Deep learning for Gut-Omni-Immunotherapy Modeling System) is an integrated framework designed to predict patient response to Immune Checkpoint Inhibitors (ICI) and provide mechanistic insights into the gut microbiome-immune system-tumor axis.
 
-Immunotherapy: ICI
-Mode of Exercise: Acute/training
-Mechanism: Increase in trafficking and homing of T cells to tumors, Increase in T cell activation and proliferation, Reduce infiltration of immunosuppresive myeloid cells to the TME
-Mode of Exercise: Chronic/long term
-Mechanism: Diminish the presence of senescent T cells, Improve T cell function and metabolism
+This version of DEEP-GOMS shifts focus to leveraging **integrated, harmonized multi-omic cohort datasets** to train and interpret predictive models. This streamlines the pipeline, improving accessibility and bypassing the need for raw sequencing data analysis (e.g., taxonomic profiling with Kraken2 or HUMAnN3).
 
-Immunotherapy: Adoptive, CAR, and gamma-delta T cell therapies
-Mode of Exercise: Acute/training
-Mechanism: Increase in T cell numbers including low frequency viral or antigen specific T cells for ex vivo expansion, increase in trafficking and homing of T cells to tumors, increase in T cell activation, proliferation, and cytotoxicity, enhanced persistence of T cells in vivo
-Mode of Exercise: Chronic/training
-Mechanism: Maintain homeostatic mechanisms for naive T cell survival via IL-7, enhance persistence of T cells in vivo, and decrease in dysfunctional senescent T cells
+---
 
-Immunotherapy: NK Cell Therapies
-Mode of Exercise: Acute/training
-Mechanism: Increase in cell numbers for ex vivo expansion, increase in trafficking and homing of NK cells to tumors, increase in NK cell activation, proliferation, and cytotoxicity, enhance persistence of NK cells in vivo
-Mode of Exercise: Chronic/training
-Mechanism: Prevent obesity-mediated NK cell dysfunction, enhance persistence of NK cells in vivo
+## Key Features (Updated)
 
-Immunotherapy: Cancer vaccines: Dendritic cells and acellular
-Mode of Exercise: Acute/training
-Mechanism: Increase in cell yield from leukapheresis products, improve efficiency of DC maturation in vivo
-Mode of Exercise: Chronic/training 
-Mechanism: Improve maintenance of circulating DCs normally lost during aging, decreased age-related decline in phagocytic activity, antigen presentation, migratory capacity of DCs
+* **Cohort Data Integration:** Aggregate and harmonize processed microbiome, single-cell, and immunotherapy response data from multiple public and private cohort studies (e.g., RaCInG, NRCO\_GOMS, PRECISE-, LORIS, etc.).
+* **Multi-omic Feature Extraction:** Utilizes pre-calculated patient-level features, including gut microbiome profiles, intratumoral immune cell composition, and specialized **ILRI (Immunotherapy Ligand-Receptor Interaction) network scores**.
+* **Machine Learning:** Trains deep learning models to predict immunotherapy response (e.g., durable clinical benefit) using harmonized multi-omic features across cohorts.
+* **Interpretability:** Derives patient-specific **ILRI fingerprints** linking gut microbiome strains, immune cells, and tumor interactions for mechanistic insight.
 
-## Features
+---
 
-- **Data Preprocessing**: Automated pipelines for raw data cleaning and transformation.
-- **Taxonomic Profiling**: Tools like Kraken2 and Bracken for microbial classification.
-- **Statistical Analysis**: Integration of results with HUMAnN3 for pathway analysis.
-- **Machine Learning**: Scripts to train and validate predictive models.
+## 💻 Setup and Installation
 
-## Requirements
+DEEP-GOMS requires a standard environment for data science and deep learning. No specialized bioinformatics tools are needed.
 
-- **R (≥ 4.4)**: For data preprocessing and analysis.
-- **FASTQC (≥ 0.12.0)**: For quality control of sequencing reads.
-- **Kraken2 (≥ 2.1.2)**: For taxonomic classification.
-- **HUMAnN3 (≥ 3.6)**: For functional profiling.
-- **MetaPhLAN**: For microbial communities from metagenomic shotgun sequencing.
-- **Python (≥ 3.8)**: For Kraken2, HUMAnN3, and MetaphLAN integration.
+### 1. Environment Setup
 
-## Use Cases
+We recommend using a virtual environment (e.g., `conda`) for dependency management.
 
-- **Microbiome Research**: Analyze metagenomic data to identify microbial communities.
-- **Biomarker Discovery**: Uncover key taxa or pathways associated with conditions.
-- **Predictive Modeling**: Train machine learning models using microbiome datasets.
+```bash
+# Clone the repository
+git clone [https://github.com/your-repo/deep-goms.git](https://github.com/your-repo/deep-goms.git)
+cd deep-goms
 
-## Quick Start
+# Create and activate the conda environment
+conda create -n deepgoms python=3.10
+conda activate deepgoms
+````
 
-1. Clone the repository:
-```
-   bash
-   git clone https://github.com/gomezdj/DEEPGOMS.git
-   cd DEEPGOMS
+### 2\. Python Requirements (Model Training & Core Pipeline)
+
+The primary machine learning, data handling, and network analysis components are run in **Python ($\ge 3.8$)**.
+
+| Package | Version | Purpose |
+| :--- | :--- | :--- |
+| **PyTorch** | Latest Stable | Core Deep Learning Model (DEEP-GOMS) training. |
+| **scikit-learn** | Latest Stable | Model evaluation, splitting, and general ML utilities. |
+| **Numpy** | 1.16.6+ | Numerical computing. |
+| **Scipy** | 1.7.1+ | Scientific computing (includes `scipy.optimize` and kernel methods). |
+| **Pandas** | 1.2.4+ | Data manipulation and handling. |
+| **networkx** | Latest Stable | Core graph analysis for ILRI feature computation. |
+| **Seaborn** | 0.11.2+ | Data visualization. |
+| **Matplotlib** | 3.4.3+ | Plotting and data visualization. |
+| **Adjusttext** | 0.7.3+ | Automated text placement in Matplotlib plots. |
+
+To install the Python requirements:
+
+```bash
+# Install required Python packages
+pip install torch scikit-learn pandas numpy scipy matplotlib seaborn networkx adjusttext
 ```
 
-2.	Install required dependencies:
-```
-  Rscript install_dependencies.R
+### 3\. R Requirements (Data Harmonization & Feature Engineering)
+
+**R version ($\ge 4.2.0$)** is required for advanced steps like batch effect correction (e.g., Harmony) and the comprehensive immune cell deconvolution used in feature engineering.
+
+| Package | Version | Purpose |
+| :--- | :--- | :--- |
+| **liana** | 0.1.10 | Ligand-Receptor Interaction (LRI) analysis. |
+| **OmnipathR** | 3.7.0 | Accessing molecular networks and pathway data. |
+| **immunedeconv** | 2.1.0 | Unified interface for multiple deconvolution methods. |
+| **easier** | 1.4.0 | Ensemble immune signature analysis. |
+| **EPIC** | 1.1.5 | Immune cell deconvolution method. |
+| **MCPcounter** | 1.2.0 | Immune cell deconvolution method. |
+| **quantiseqr** | 1.6.0 | Immune cell deconvolution method. |
+| **xCell** | 1.1.0 | Immune cell deconvolution method. |
+| **ConsensusTME** | 0.0.1.9000 | Consensus Tumor Microenvironment estimation. |
+| **dplyr** | 1.0.10 | Data manipulation and structure. |
+| **ggplot2** | 3.4.0 | Data visualization. |
+| **corrplot** | 0.92 | Visualization of correlation matrices. |
+
+-----
+
+## 🚀 Quick Start: Running the Predictive Framework
+
+This quick start guides you through downloading the integrated data and running a basic prediction/interpretation task using the combined cohort features.
+
+### Step 1: Download Harmonized Cohort Features
+
+The DEEP-GOMS pipeline relies on a pre-processed and harmonized feature matrix that integrates data from the specified cohort studies.
+
+```bash
+# This script downloads the pre-processed HDF5 file (or similar format) 
+# containing the harmonized multi-omic features and clinical outcomes.
+python src/data/download_cohort_data.py
+# Output: data/harmonized_features_all_cohorts.h5
 ```
 
-## Setup and Installation
+### Step 2: Load Data and Train a DEEP-GOMS Model
 
-1. **Install Dependencies**:
-```R
-install.packages("fastqcr")
-install.packages("curatedMetagenomicData")
-install.packages("phyloseq")
-install.packages("caret")
-install.packages("randomForest")
-install.packages("targets")
-```
-2. **Clone the Repository**:
-```
-git clone https://github.com/gomezdj/DEEP-GOMS.git
-cd DEEP-GOMS
+Use the integrated data to initialize and train the predictive model.
+
+```python
+import pandas as pd
+from src.model.deepgoms import DEEPGOMS
+from sklearn.model_selection import train_test_split
+
+# 1. Load the harmonized feature matrix
+data = pd.read_hdf('data/harmonized_features_all_cohorts.h5', key='features')
+# Assuming features and labels are defined
+X = data.drop(columns=['Response_Label', 'Cohort_ID'])
+y = data['Response_Label']
+
+# Split data for basic testing (Cross-validation across cohorts is recommended for robust evaluation)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 2. Initialize and Train the Model
+input_dim = X_train.shape[1] 
+model = DEEPGOMS(input_dim=input_dim, hidden_dim=64, num_layers=2)
+model.train_model(X_train, y_train, epochs=50, learning_rate=0.001)
+
+# 3. Evaluate and Predict
+predictions = model.predict_proba(X_test)
+print(f"Sample prediction probabilities (Non-Response vs. Response):\n{predictions[:5]}")
 ```
 
-3. Running the Workflow
-Activate Environment: Ensure you have the necessary environment set up with required dependencies.
-Run the Pipeline:
-```
-library()
+### Step 3: Interpret Patient ILRI Fingerprints
+
+Generate the core mechanistic insights (ILRI fingerprints) that link specific microbiome and immune features to the model's prediction for a given patient.
+
+```python
+from src.interpret.fingerprint import generate_ilri_fingerprint
+
+# Select a patient's features from the test set for interpretation
+patient_features = X_test.iloc[0]
+
+# Generate the patient-specific interpretation
+fingerprint = generate_ilri_fingerprint(model, patient_features)
+
+print("--- Patient-Specific ILRI Fingerprint ---")
+print(f"Predicted Response Probability: {predictions[0][1]:.4f}")
+print("Top 5 Positive Predictors (Microbe-Immune-Tumor Interactions):")
+print(fingerprint['Positive_Drivers'].head())
 ```
 
-4. Customization for Personalization
-Modify and config.yaml files according to your specific needs.
+-----
 
-## Contact
-<<<<<<< HEAD
-For any questions or issues, please contact Daniel Gomez (danielgenetics@gmail.com).
-=======
-For any questions or issues, please contact Daniel Gomez (danielphysiology@gmail.com).
->>>>>>> d777db2ba8b7238006f53d10fde18b6a5afe2633
+## ⚙️ Full Workflow (Cohort-Based)
+
+The following steps detail the full DEEP-GOMS predictive pipeline. Users primarily interact with the outputs of **Data Harmonization** and proceed to **Model Training**.
+
+| Step | Description | Dependencies/Tools | Output |
+| :--- | :--- | :--- | :--- |
+| **Data Acquisition** | Download processed multi-omic and clinical data from specified cohorts. | `src/data/download_cohort_data.py` | Raw Cohort Data Files |
+| **Data Harmonization** | Standardize features, units, and metadata across cohorts. Correct batch effects using techniques like Harmony. | **R** (`Harmony`), **Python** (`pandas`) | `harmonized_features_all_cohorts.h5` |
+| **Feature Engineering** | Construct **ILRI network features** (e.g., graph centrality) from harmonized immune and microbiome data. | `networkx`, `igraph`, `src/features/ilri_engineer.py` | Integrated Feature Matrix |
+| **Model Training** | Train the DEEP-GOMS deep learning architecture using the integrated multi-omic and ILRI features. | `PyTorch`, `scikit-learn` | Trained `deepgoms_model.pth` |
+| **Prediction & Interpretation** | Output patient-specific immunotherapy response probabilities and generate detailed ILRI fingerprints. | `src/model/predict.py`, `src/interpret/fingerprint.py` | Predictions, Interpretive Reports |
+
+```
+```
