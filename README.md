@@ -94,4 +94,4 @@ library()
 Modify and config.yaml files according to your specific needs.
 
 ## Contact
-For any questions or issues, please contact Daniel Gomez (gomezscientist0@gmail.com).
+For any questions or issues, please contact Daniel Gomez (danielgenetics@gmail.com).
