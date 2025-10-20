@@ -125,9 +125,9 @@ predictions = model.predict_proba(X_test)
 print(f"Sample prediction probabilities (Non-Response vs. Response):\n{predictions[:5]}")
 ```
 
-### Step 3: Interpret Patient ILRI Fingerprints
+### Step 3: Interpret Patient Microbiome Signature 
 
-Generate the core mechanistic insights (ILRI fingerprints) that link specific microbiome and immune features to the model's prediction for a given patient.
+Generate the core mechanistic insights that link specific microbiome and immune features to the model's prediction for a given patient.
 
 ```python
 from src.interpret.fingerprint import generate_ilri_fingerprint
@@ -136,9 +136,9 @@ from src.interpret.fingerprint import generate_ilri_fingerprint
 patient_features = X_test.iloc[0]
 
 # Generate the patient-specific interpretation
-fingerprint = generate_ilri_fingerprint(model, patient_features)
+GOMS = generate_goms_signatures(model, patient_features)
 
-print("--- Patient-Specific ILRI Fingerprint ---")
+print("--- Patient-Specific GOMS ---")
 print(f"Predicted Response Probability: {predictions[0][1]:.4f}")
 print("Top 5 Positive Predictors (Microbe-Immune-Tumor Interactions):")
 print(fingerprint['Positive_Drivers'].head())
@@ -155,8 +155,8 @@ The following steps detail the full DEEP-GOMS predictive pipeline. Users primari
 | **Data Acquisition** | Download processed multi-omic and clinical data from specified cohorts. | `src/data/download_cohort_data.py` | Raw Cohort Data Files |
 | **Data Harmonization** | Standardize features, units, and metadata across cohorts. Correct batch effects using techniques like Harmony. | **R** (`Harmony`), **Python** (`pandas`) | `harmonized_features_all_cohorts.h5` |
 | **Feature Engineering** | Construct **ILRI network features** (e.g., graph centrality) from harmonized immune and microbiome data. | `networkx`, `igraph`, `src/features/ilri_engineer.py` | Integrated Feature Matrix |
-| **Model Training** | Train the DEEP-GOMS deep learning architecture using the integrated multi-omic and ILRI features. | `PyTorch`, `scikit-learn` | Trained `deepgoms_model.pth` |
-| **Prediction & Interpretation** | Output patient-specific immunotherapy response probabilities and generate detailed ILRI fingerprints. | `src/model/predict.py`, `src/interpret/fingerprint.py` | Predictions, Interpretive Reports |
+| **Model Training** | Train the DEEP-GOMS deep learning architecture using the integrated multi-omic and GOMS features. | `PyTorch`, `scikit-learn` | Trained `deepgoms_model.pth` |
+| **Prediction & Interpretation** | Output patient-specific immunotherapy response probabilities and generate detailed GOMS. | `src/model/predict.py`, `src/interpret/signatures.py` | Predictions, Interpretive Reports |
 
 ```
 ```
