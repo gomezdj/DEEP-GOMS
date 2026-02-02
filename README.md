@@ -3,7 +3,7 @@ Here is the complete content for the `README.md` file, formatted correctly in Ma
 ````markdown
 # 🧬 DEEP-GOMS: Cohort-Driven Predictive Modeling of Immunotherapy Response
 
-DEEP-GOMS (Deep learning for Gut-Omni-Immunotherapy Modeling System) is an integrated framework designed to predict patient response to Immune Checkpoint Inhibitors (ICI) and provide mechanistic insights into the gut microbiome-immune system-tumor axis.
+DEEP-GOMS (Deep Evolutionary Ensemble Predictive model for Gut OncoMicrobiome Signatures) is an integrated framework designed to predict patient response to Immune Checkpoint Inhibitors (ICI) and provide mechanistic insights into the gut microbiome-immune system-tumor axis.
 
 This version of DEEP-GOMS shifts focus to leveraging **integrated, harmonized multi-omic cohort datasets** to train and interpret predictive models. This streamlines the pipeline, improving accessibility and bypassing the need for raw sequencing data analysis (e.g., taxonomic profiling with Kraken2 or HUMAnN3).
 
