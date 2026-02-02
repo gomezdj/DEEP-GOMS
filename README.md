@@ -11,10 +11,10 @@ This version of DEEP-GOMS shifts focus to leveraging **integrated, harmonized mu
 
 ## Key Features (Updated)
 
-* **Cohort Data Integration:** Aggregate and harmonize processed microbiome, single-cell, and immunotherapy response data from multiple public and private cohort studies (e.g., RaCInG, NRCO\_GOMS, PRECISE-, LORIS, etc.).
-* **Multi-omic Feature Extraction:** Utilizes pre-calculated patient-level features, including gut microbiome profiles, intratumoral immune cell composition, and specialized **ILRI (Immunotherapy Ligand-Receptor Interaction) network scores**.
+* **Cohort Data Integration:** Aggregate and harmonize processed microbiome, spatial, single-cell immunotherapy, immuno-oncology response data from multiple public and private cohort studies (e.g., NRCO_GOMS, MCSPACE, PRECISE-, etc.).
+* **Multi-omic Feature Extraction:** Utilizes pre-calculated patient-level features, including gut microbiome profiles, intratumoral immune cell composition, and specialized **ILRI (Immunotherapy) network scores**.
 * **Machine Learning:** Trains deep learning models to predict immunotherapy response (e.g., durable clinical benefit) using harmonized multi-omic features across cohorts.
-* **Interpretability:** Derives patient-specific **ILRI fingerprints** linking gut microbiome strains, immune cells, and tumor interactions for mechanistic insight.
+* **Interpretability:** Derives patient-specific **GOMS** linking gut microbiome strains, immune cells, and tumor interactions for mechanistic insight.
 
 ---
 
@@ -28,7 +28,7 @@ We recommend using a virtual environment (e.g., `conda`) for dependency manageme
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your-repo/deep-goms.git](https://github.com/your-repo/deep-goms.git)
+git clone [https://github.com/gomezdj/deep-goms.git](https://github.com/gomezdj/deep-goms.git)
 cd deep-goms
 
 # Create and activate the conda environment
