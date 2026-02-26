@@ -2,7 +2,7 @@
 
 DEEP-GOMS (Deep Evolutionary Ensemble Predictor for Gut OncoMicrobiome Signatures) is an integrated, cohort-driven framework for predicting patient response to cancer immunotherapies and deriving mechanistic insights across the gut microbiome–immune system–tumor axis.
 
-This version emphasizes harmonized, multi-cohort, multi-omic modeling, integrating bulk RNA-seq, single-cell RNA-seq, spatial proteomics (CODEX Phenocycler), tumor microenvironment (TME) deconvolution, and microbiome-derived features to enable robust, interpretable prediction of immunotherapy outcomes.
+This version emphasizes harmonized, multi-cohort, multi-omic modeling, integrating bulk RNA-seq, single-cell RNA-seq, spatial transcriptomics (Visium, MERSCOPE, CosMx, etc.), tumor microenvironment (TME) deconvolution, and microbiome-derived features to enable robust, interpretable prediction of immunotherapy outcomes.
 
 ⸻
 
