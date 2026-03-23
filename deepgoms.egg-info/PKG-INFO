@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: deepgoms
+Version: 2.0.0
+Summary: DEEP-GOMS: Deep Evolutionary Ensemble Predictor for Gut OncoMicrobiome Signatures — Cancer Immunotherapy Biomarkers
+Home-page: https://github.com/gomezdj/DEEP-GOMS
+Author: gomezdj
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Requires-Dist: torch==2.5.1
+Requires-Dist: torchvision==0.20.1
+Requires-Dist: xgboost==2.1.4
+Requires-Dist: lightgbm==4.6.0
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.15.2
+Requires-Dist: shap==0.46.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: anndata==0.10.9
+Requires-Dist: scanpy==1.10.4
+Requires-Dist: harmonypy==0.0.10
+Requires-Dist: pydeseq2==0.4.12
+Requires-Dist: torch-geometric==2.6.1
+Requires-Dist: networkx==3.4.2
+Requires-Dist: python-igraph==0.11.8
+Requires-Dist: leidenalg==0.10.2
+Requires-Dist: umap-learn==0.5.7
+Requires-Dist: celltypist==1.6.3
+Requires-Dist: matplotlib==3.9.4
+Requires-Dist: seaborn==0.13.2
+Requires-Dist: adjusttext==1.2.0
+Requires-Dist: tqdm==4.67.1
+Provides-Extra: scvi
+Requires-Dist: scvi-tools==1.2.2; extra == "scvi"
+Provides-Extra: gpu
+Requires-Dist: torch==2.5.1+cu124; extra == "gpu"
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+deepgoms.egg-info/PKG-INFO
+deepgoms.egg-info/SOURCES.txt
+deepgoms.egg-info/dependency_links.txt
+deepgoms.egg-info/entry_points.txt
+deepgoms.egg-info/requires.txt
+deepgoms.egg-info/top_level.txt
