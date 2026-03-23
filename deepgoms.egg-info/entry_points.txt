@@ -1,0 +1,4 @@
+[console_scripts]
+deepgoms-lodo = lodo_cross_validation:main
+deepgoms-preprocess = scripts.preprocess:main
+deepgoms-train = train_model:main

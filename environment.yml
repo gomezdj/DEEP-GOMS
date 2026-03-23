@@ -1,0 +1,74 @@
+name: deep-goms
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ── Python ──────────────────────────────────────────────────────────────────
+  - python=3.10.14
+
+  # ── System libraries (conda-managed — avoids macOS/Linux conflicts) ─────────
+  - hdf5>=1.14.0           # required by anndata / h5py
+  - libzlib>=1.2.13        # zlib for scanpy / h5py
+  - llvm-openmp>=17.0      # OpenMP for xgboost / lightgbm on macOS
+  - openblas>=0.3.26       # BLAS for numpy / scipy on Linux
+
+  # ── Build tools ─────────────────────────────────────────────────────────────
+  - pip>=24.0
+  - setuptools>=69.0
+  - wheel>=0.43
+
+  # ── pip-installed packages ───────────────────────────────────────────────────
+  - pip:
+    # Deep learning
+    - torch==2.5.1
+    - torchvision==0.20.1
+
+    # Gradient boosting
+    - xgboost==2.1.4
+    - lightgbm==4.6.0
+
+    # Classical ML
+    - scikit-learn==1.6.1
+    - scipy==1.15.2
+
+    # Explainability
+    - shap==0.46.0
+
+    # Data
+    - numpy==1.26.4
+    - pandas==2.2.3
+    - pyyaml==6.0.2
+
+    # Omics — single-cell
+    - anndata==0.10.9
+    - scanpy==1.10.4
+    - scvi-tools==1.2.2
+
+    # Omics — microbiome batch correction
+    - harmonypy==0.0.10
+
+    # Omics — differential expression
+    - pydeseq2==0.4.12
+
+    # Graph
+    - torch-geometric==2.6.1
+    - networkx==3.4.2
+    - python-igraph==0.11.8
+    - leidenalg==0.10.2
+
+    # Dimensionality reduction
+    - umap-learn==0.5.7
+
+    # Cell type annotation
+    - celltypist==1.6.3
+
+    # Visualisation
+    - matplotlib==3.9.4
+    - seaborn==0.13.2
+    - adjusttext==1.2.0
+
+    # Utilities
+    - tqdm==4.67.1
+
+path: /Users/dgomez/workspace/Projects/R/DEEP-GOMS/environment.yml
